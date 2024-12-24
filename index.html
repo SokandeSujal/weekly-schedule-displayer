@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daily Schedule Tracker</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body
+    class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50 p-4 md:p-8"
+  >
+    <div class="max-w-5xl mx-auto">
+      <div
+        class="bg-white rounded-2xl shadow-xl p-6 mb-6 transform hover:scale-[1.02] transition-transform"
+      >
+        <div
+          class="flex flex-col md:flex-row items-center justify-between mb-6"
+        >
+          <div class="flex flex-col gap-1">
+            <h1
+              class="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-500"
+            >
+              Yash's Weekly Schedule
+            </h1>
+            <p
+              id="currentDay"
+              class="text-xl md:text-2xl text-gray-600 font-medium"
+              style="text-align: center"
+            ></p>
+          </div>
+          <div
+            class="flex items-center text-lg text-gray-600 bg-blue-50 px-4 py-2 rounded-lg"
+          >
+            <svg
+              class="clock-icon mr-2 animate-pulse"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <circle cx="12" cy="12" r="10" stroke-width="2" />
+              <path stroke-width="2" d="M12 6v6l4 2" />
+            </svg>
+            <span id="currentTime"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Current Time Slot Card -->
+      <div
+        class="bg-white rounded-2xl shadow-xl p-6 mb-6 transform hover:scale-[1.02] transition-transform"
+      >
+        <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-6">
+          <h2 class="text-2xl font-semibold mb-4 text-gray-800">
+            Current Time Slot
+          </h2>
+          <p
+            id="currentTimeSlot"
+            class="text-lg text-gray-700 font-medium mb-4"
+          ></p>
+          <h3 class="text-xl font-semibold mb-2 text-gray-800">Current Task</h3>
+          <p
+            id="currentTask"
+            class="text-gray-700 task-description leading-relaxed"
+          ></p>
+        </div>
+      </div>
+
+      <!-- Schedule Card -->
+      <div
+        class="bg-white rounded-2xl shadow-xl p-6 transform hover:scale-[1.02] transition-transform"
+      >
+        <h2 class="text-2xl font-semibold mb-6 text-gray-800">
+          Today's Schedule
+        </h2>
+        <div id="scheduleContainer" class="space-y-4"></div>
+      </div>
+    </div>
+    <div class="attribution">
+      Made with ❤️ by
+      <a
+        href="https://sokandesujal.github.io/Portfolio/"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Sujal Sokande</a
+      >
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
